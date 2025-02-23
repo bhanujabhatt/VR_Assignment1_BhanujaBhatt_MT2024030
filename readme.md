@@ -4,113 +4,105 @@ git push -u origin main
 
 ![alt text](output.png)
 ![alt text](images/output.png) 
-Coin Detection and Counting
+# Coin Detection and Counting using Edge Detection Techniques
 
-Overview
+## Project Description
 
-This project focuses on detecting and counting coins in an image using various edge detection techniques, including:
+This project focuses on detecting and counting coins in an image using various edge detection techniques. The methods implemented include first-order derivative edge detectors (Sobel and Prewitt), the Marr-Hildreth edge detector, and the Canny edge detector. Each technique's effectiveness is analyzed in terms of noise sensitivity, edge continuity, and accuracy in detecting the true edges of the coins.
 
-Sobel Edge Detector
+## Table of Contents
 
-Prewitt Edge Detector
+Technologies Used
 
-Marr-Hildreth Edge Detector
+How to Install and Run the Project
 
-Canny Edge Detector
+How to Use the Project
 
-Each method is used to identify edges in the image, and contours are extracted to outline and count the number of coins.
+Edge Detection Techniques
 
-Requirements
+Sobel Edge Detection
 
-To run this project, you need the following dependencies:
+Prewitt Edge Detection
 
-Python 3.x
+Marr-Hildreth Edge Detection
 
-OpenCV
+Canny Edge Detection
+
+Results and Analysis
+
+Credits
+
+## Technologies Used
+
+Python
+
+OpenCV (cv2)
 
 NumPy
 
 Matplotlib
 
-Install the required packages using:
+## How to Install and Run the Project
+
+Clone the repository:
+
+git clone https://github.com/yourusername/coin-detection.git
+cd coin-detection
+
+Install the required dependencies:
 
 pip install opencv-python numpy matplotlib
 
-Usage
+Run the project:
 
-1. Detecting Coins Using First Order Derivative Edge Detectors (Sobel & Prewitt)
+python coin_detection.py
 
-python first_order_edge_detection.py
+## How to Use the Project
 
-This script performs Sobel and Prewitt edge detection and outlines the detected coins.
+Ensure you have an image named coinn.jpg in the working directory.
 
-2. Detecting Coins Using Marr-Hildreth Edge Detector
+Run the script to apply different edge detection methods.
 
-python marr_hildreth_edge_detection.py
+The script will display the results, including edge maps and detected coin contours.
 
-This script applies the Marr-Hildreth (Laplacian of Gaussian) edge detector and highlights the coins.
+The program will also count and display the number of coins detected.
 
-3. Detecting Coins Using Canny Edge Detector
+## Edge Detection Techniques
 
-python canny_edge_detection.py
+1. Sobel Edge Detection
 
-This script applies the Canny edge detector and outlines the detected coins.
+Computes gradients in the x and y directions.
 
-4. Counting the Total Number of Coins
+Less sensitive to noise and provides smooth edge detection.
 
-python count_coins.py
+2. Prewitt Edge Detection
 
-This script processes the image, extracts contours, and counts the number of coins.
+Similar to Sobel but with simpler kernel operations.
 
-Edge Detection Techniques Used
+More sensitive to noise but provides sharp contrast edges.
 
-Sobel Edge Detector
+3. Marr-Hildreth Edge Detection
 
-Less sensitive to noise.
+Uses Laplacian of Gaussian (LoG) to detect zero crossings.
 
-Produces smooth gradients.
+Provides fine, one-pixel-thick edges but may have broken edges.
 
-Good for detecting fine edges.
+4. Canny Edge Detection
 
-Prewitt Edge Detector
+Uses Gaussian filtering and gradient-based thresholding.
 
-More sensitive to noise.
+Produces clean, connected edges with minimal noise interference.
 
-Faster but less accurate than Sobel.
+## Results and Analysis
 
-Produces strong contrasts in edges.
+Sobel Detector: Smooth edges with less noise sensitivity.
 
-Marr-Hildreth Edge Detector
+Prewitt Detector: Sharp edges but more noise-sensitive.
 
-Produces one-pixel-thick edges.
+Marr-Hildreth: Provides thin edges but may have broken edges.
 
-Detects true edges with minimal error.
+Canny Detector: Most effective, with well-connected edges and minimal noise.
 
-May result in broken edges.
+Final Coin Count: The project also counts the total number of coins detected in the image.
 
-Canny Edge Detector
-
-Produces less broken edges.
-
-Generates one-pixel-thick edges.
-
-Detects true edges with minimal error.
-
-Results and Observations
-
-Sobel and Prewitt detect edges efficiently, but Prewitt is more sensitive to noise.
-
-Marr-Hildreth produces clear, thin edges but can have broken edges.
-
-Canny provides the best results with minimal noise and well-defined edges.
-
-The final step counts the number of coins accurately using contour filtering.
-
-Example Output
-
-Detected coins: X (Number of coins found in the image)
-
-Author
-
-Developed by: [Your Name]
 
