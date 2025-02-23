@@ -122,7 +122,52 @@ less error(get true edges)
 ## total count of coin detected
 
  The script applies grayscale conversion, Gaussian blurring, adaptive thresholding, and morphological processing to identify circular objects (coins). It filters contours based on area and circularity to ensure accurate counting. The detected coins are outlined in green, and the total count is displayed.
+1. Load the Image
 
+    Read the image using cv2.imread() and store it for further processing.
+
+2. Convert to Grayscale
+
+    Convert the image to grayscale using cv2.cvtColor() to simplify processing.
+
+3. Apply Gaussian Blur
+
+    Use cv2.GaussianBlur() to smooth the image and reduce noise.
+
+4. Apply Adaptive Thresholding
+
+    Use cv2.adaptiveThreshold() to create a binary image, highlighting coin edges.
+
+5. Use Morphological Operations
+
+    Apply cv2.morphologyEx() to close small gaps and remove noise.
+
+6. Find Contours
+
+    Use cv2.findContours() to detect object boundaries in the processed image.
+
+7. Filter Circular Contours
+
+    Compute perimeter, area, and circularity to identify coin-like objects.
+    Use a circularity threshold (0.7 - 1.2) to filter only round objects.
+
+8. Count and Draw Detected Coins
+
+    Increment the coin count for each valid circular contour.
+    Use cv2.drawContours() to outline detected coins in green.
+
+9. Convert Image to RGB
+
+    Convert from BGR to RGB for correct color representation in Matplotlib.
+
+10. Display the Result
+
+    Use matplotlib.pyplot to show the processed image with the coin count.
+
+11. Print the Total Number of Coins
+
+    Output the total count of detected coins in the console.
+    
 ![alt text](<images/output of finding no of coins.png>)
 
 ## Results and Analysis
