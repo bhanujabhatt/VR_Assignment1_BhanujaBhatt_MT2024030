@@ -91,7 +91,7 @@ Prewitt is generally used when you want simpler, faster computations and you are
 Sobel X/Y might produce less extreme values or smoother gradients, which are more subtle, leading to gradual gray-scale variations.
 Prewitt X/Y, by contrast, might produce a stronger contrast in its edge detections, where you have stark differences between edge and non-edge pixels, hence appearing as black and white.
 
-### 3. mill hilderth edge detection
+### 3. Mill hilderth edge detection
 
 Uses Laplacian of Gaussian (LoG) to detect zero crossings.
 
@@ -120,40 +120,11 @@ one pixel thick edges
 less error(get true edges)
 
 ## total count of coin detected
-Load the Image
 
-    The script reads the image file (coinn.jpg).
+ The script applies grayscale conversion, Gaussian blurring, adaptive thresholding, and morphological processing to identify circular objects (coins). It filters contours based on area and circularity to ensure accurate counting. The detected coins are outlined in green, and the total count is displayed.
 
-Resize for Consistency
+![alt text](<images/output of finding no of coins.png>)
 
-    The image is resized to 80% of its original size while maintaining the aspect ratio.
-
-Convert to Grayscale
-
-    The image is converted to a grayscale format to simplify processing.
-
-Apply Adaptive Thresholding
-
-    Adaptive Gaussian thresholding is used to highlight the coins against the background.
-
-Find Contours
-
-    Contours (edges of objects) are detected in the thresholded image.
-
-Filter Contours by Area
-
-    Small contours (noise) are removed based on a minimum area threshold (5000 pixels).
-
-Draw Contours and Count Coins
-
-    The detected coin contours are drawn in green, and the number of coins is counted.
-
-Display Results
-
-    The processed image with detected coins is displayed along with the total count.
-
-   ![alt text](<images/output of finding no of coins.png>)
-    
 ## Results and Analysis
 
 Sobel Detector: Smooth edges with less noise sensitivity.
