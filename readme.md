@@ -68,13 +68,13 @@ The program will also count and display the number of coins detected.
 
 ## Edge Detection Techniques
 
-1. Sobel Edge Detection
+### 1. Sobel Edge Detection
 
 Computes gradients in the x and y directions.
 
 Less sensitive to noise and provides smooth edge detection.
 
-2. Prewitt Edge Detection
+### 2. Prewitt Edge Detection
 
 Similar to Sobel but with simpler kernel operations.
 
@@ -82,7 +82,7 @@ More sensitive to noise but provides sharp contrast edges.
 
 ![alt text](<images/output of edge detection using first order derivative prewitt and sobel.png>)
 
-### conclusion 
+#### conclusion 
 
 Sobel is less sensitive to noise
 Prewitt is more sensitive to noise
@@ -91,7 +91,7 @@ Prewitt is generally used when you want simpler, faster computations and you are
 Sobel X/Y might produce less extreme values or smoother gradients, which are more subtle, leading to gradual gray-scale variations.
 Prewitt X/Y, by contrast, might produce a stronger contrast in its edge detections, where you have stark differences between edge and non-edge pixels, hence appearing as black and white.
 
-3. mill hilderth edge detection
+### 3. mill hilderth edge detection
 
 Uses Laplacian of Gaussian (LoG) to detect zero crossings.
 
@@ -99,13 +99,13 @@ Provides fine, one-pixel-thick edges but may have broken edges.
 
 ![alt text](<images/output of using mill hilderth edge detector.png>)
 
-### conclusion
+#### conclusion
 
 broken edges are present
 one pixel thick edges
 less error(get true edges)
 
-4. Canny Edge Detection
+### 4. Canny Edge Detection
 
 Uses Gaussian filtering and gradient-based thresholding.
 
@@ -113,41 +113,47 @@ Produces clean, connected edges with minimal noise interference.
 
 ![alt text](<images/output of canny edge detector.png>)
 
-### conclusion
+#### conclusion
 
 less broken edges
 one pixel thick edges
 less error(get true edges)
 
 ## total count of coin detected
-    Load the Image
-        The script reads the image file (coinn.jpg).
+Load the Image
 
-    Resize for Consistency
-        The image is resized to 80% of its original size while maintaining the aspect ratio.
+    The script reads the image file (coinn.jpg).
 
-    Convert to Grayscale
-        The image is converted to a grayscale format to simplify processing.
+Resize for Consistency
 
-    Apply Adaptive Thresholding
-        Adaptive Gaussian thresholding is used to highlight the coins against the background.
+    The image is resized to 80% of its original size while maintaining the aspect ratio.
 
-    Find Contours
-        Contours (edges of objects) are detected in the thresholded image.
+Convert to Grayscale
 
-    Filter Contours by Area
-        Small contours (noise) are removed based on a minimum area threshold (5000 pixels).
+    The image is converted to a grayscale format to simplify processing.
 
-    Draw Contours and Count Coins
-        The detected coin contours are drawn in green, and the number of coins is counted.
+Apply Adaptive Thresholding
 
-    Display Results
-        The processed image with detected coins is displayed along with the total count.
+    Adaptive Gaussian thresholding is used to highlight the coins against the background.
+
+Find Contours
+
+    Contours (edges of objects) are detected in the thresholded image.
+
+Filter Contours by Area
+
+    Small contours (noise) are removed based on a minimum area threshold (5000 pixels).
+
+Draw Contours and Count Coins
+
+    The detected coin contours are drawn in green, and the number of coins is counted.
+
+Display Results
+
+    The processed image with detected coins is displayed along with the total count.
 
    ![alt text](<images/output of finding no of coins.png>)
     
-
-
 ## Results and Analysis
 
 Sobel Detector: Smooth edges with less noise sensitivity.
