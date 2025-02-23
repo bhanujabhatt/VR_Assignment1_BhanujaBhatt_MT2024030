@@ -75,25 +75,29 @@ Computes gradients in the x and y directions.
 
 Less sensitive to noise and provides smooth edge detection.
 
-![alt text](images/output of using mill hilderth edge detector.png)
-
 2. Prewitt Edge Detection
 
 Similar to Sobel but with simpler kernel operations.
 
 More sensitive to noise but provides sharp contrast edges.
 
-3. Marr-Hildreth Edge Detection
+![alt text](<images/output of edge detection using first order derivative prewitt and sobel.png>)
+
+3. mill hilderth edge detection
 
 Uses Laplacian of Gaussian (LoG) to detect zero crossings.
 
 Provides fine, one-pixel-thick edges but may have broken edges.
+
+![alt text](<images/output of using mill hilderth edge detector.png>)
 
 4. Canny Edge Detection
 
 Uses Gaussian filtering and gradient-based thresholding.
 
 Produces clean, connected edges with minimal noise interference.
+
+![alt text](<images/output of canny edge detector.png>)
 
 ## Results and Analysis
 
@@ -106,5 +110,7 @@ Marr-Hildreth: Provides thin edges but may have broken edges.
 Canny Detector: Most effective, with well-connected edges and minimal noise.
 
 Final Coin Count: The project also counts the total number of coins detected in the image.
+
+![alt text](<images/output of finding no of coins.png>)
 
 
