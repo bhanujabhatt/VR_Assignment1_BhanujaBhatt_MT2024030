@@ -3,7 +3,7 @@ git commit -m "sdf"
 git push -u origin main
 
 
-# Coin Detection and Counting using Edge Detection Techniques
+# 1 )Coin Detection and Counting using Edge Detection Techniques
 
 ## Project Description
 
@@ -181,7 +181,7 @@ Canny Detector: Most effective, with well-connected edges and minimal noise.
 
 Final Coin Count: The project also counts the total number of coins detected in the image.
 
-# Image Stitching using OpenCV
+# 2) Image Stitching using OpenCV
 
 ## Project Description
 
