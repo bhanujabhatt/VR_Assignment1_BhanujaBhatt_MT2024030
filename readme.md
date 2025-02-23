@@ -3,7 +3,7 @@ git commit -m "sdf"
 git push -u origin main
 
 
-# 1 )Coin Detection and Counting using Edge Detection Techniques
+# 1)Coin Detection and Counting using Edge Detection Techniques
 
 ## Project Description
 
@@ -118,7 +118,7 @@ less broken edges
 one pixel thick edges
 less error(get true edges)
 
-## total count of coin detected
+## Total count of coin detected
 
  The script applies grayscale conversion, Gaussian blurring, adaptive thresholding, and morphological processing to identify circular objects (coins). It filters contours based on area and circularity to ensure accurate counting. The detected coins are outlined in green, and the total count is displayed.
 1. Load the Image
