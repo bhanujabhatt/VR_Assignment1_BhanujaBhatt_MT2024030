@@ -2,7 +2,7 @@ git add .
 git commit -m "sdf"
 git push -u origin main
 
-![alt text](output.png)
+
 ![alt text](images/output.png) 
 # Coin Detection and Counting using Edge Detection Techniques
 
@@ -74,6 +74,8 @@ The program will also count and display the number of coins detected.
 Computes gradients in the x and y directions.
 
 Less sensitive to noise and provides smooth edge detection.
+
+![alt text](images/output of using mill hilderth edge detector.png)
 
 2. Prewitt Edge Detection
 
