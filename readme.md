@@ -79,8 +79,7 @@ Less sensitive to noise and provides smooth edge detection.
 Similar to Sobel but with simpler kernel operations.
 
 More sensitive to noise but provides sharp contrast edges.
-
-![alt text](<images/output of edge detection using first order derivative prewitt and sobel.png>)
+![alt text](<output images/output of edge detection using first order derivative prewitt and sobel.png>)
 
 #### conclusion 
 
@@ -97,7 +96,7 @@ Uses Laplacian of Gaussian (LoG) to detect zero crossings.
 
 Provides fine, one-pixel-thick edges but may have broken edges.
 
-![alt text](<images/output of using mill hilderth edge detector.png>)
+![alt text](<output images/output of using mill hilderth edge detector.png>)
 
 #### conclusion
 
@@ -111,7 +110,7 @@ Uses Gaussian filtering and gradient-based thresholding.
 
 Produces clean, connected edges with minimal noise interference.
 
-![alt text](<images/output of canny edge detector.png>)
+![alt text](<output images/output of canny edge detector.png>)
 
 #### conclusion
 
@@ -168,7 +167,7 @@ less error(get true edges)
 
     Output the total count of detected coins in the console.
 
-![alt text](<images/output of finding no of coins.png>)
+![alt text](<output images/output of finding no of coins.png>)
 
 ## Results and Analysis
 
