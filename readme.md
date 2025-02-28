@@ -11,30 +11,30 @@ This project aims to detect, segment, and count coins in an image using various 
 
 ## Table of Contents
 
-Technologies Used
-How to Install and Run the Project
-How to Use the Project
-Edge Detection Techniques
-Sobel Edge Detection
-Prewitt Edge Detection
-Marr-Hildreth Edge Detection
-Canny Edge Detection
-Coin Segmentation
-count of total no detected coins
-Results and Analysis
-Future Scope
+1  Technologies Used
+2  How to Install and Run the Project
+3  How to Use the Project
+4  Edge Detection Techniques
+5  Sobel Edge Detection
+6  Prewitt Edge Detection
+7  Marr-Hildreth Edge Detection
+8  Canny Edge Detection
+9  Coin Segmentation
+10 count of total no detected coins
+11 Results and Analysis
+12 Future Scope
 
 ## Technologies Used
 
-Python(Python 3.9.21)
-OpenCV (cv2 4.11.0)
-NumPy
-Matplotlib
+. Python(Python 3.9.21)
+. OpenCV (cv2 4.11.0)
+. NumPy
+. Matplotlib
 
 ## How to Install and Run the Project
 
-Clone the repository:
-git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git
+.Clone the repository:
+.git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git
 cd VR_Assignment1_BhanujaBhatt_MT2024030
 
 Install the required dependencies:
@@ -217,7 +217,7 @@ Develop a real-time detection system using OpenCV and a webcam
 
 
 
-# 2) Image Stitching using OpenCV
+# 2) Image Stitching 
 
 ## Project Description
 
