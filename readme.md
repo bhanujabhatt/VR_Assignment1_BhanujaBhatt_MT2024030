@@ -41,7 +41,7 @@ Install the required dependencies:<br>
 pip install opencv-python numpy matplotlib<br>
 
 Run the project<br>
-run as normal phython project
+run as normal python project
 
 
 ## How to Use the Project
@@ -103,19 +103,24 @@ less error(get true edges)<br>
 
 Steps:<br>
 
-Convert the image to grayscale.<br>
-Apply Gaussian Blur to reduce noise.<br>
-Apply Otsu’s Thresholding to create a binary image.<br>
+1)Convert the image to grayscale.<br>
 
-Region Splitting:<br>
+2)Apply Gaussian Blur to reduce noise.<br>
+
+3)Apply Otsu’s Thresholding to create a binary image.<br>
+
+4)Region Splitting:<br>
 Recursively divide the image into smaller regions based on intensity variance.<br>
 Stop splitting if variance is low or the region size is too small.<br>
 
-Region Merging:<br>
+5)Region Merging:<br>
 Merge regions based on similarity (average intensity difference).<br>
-Assign detected coin regions as the foreground.<br>
-Extract individual coins using Connected Components Analysis.<br>
-Display the segmented coins and extracted individual coins.<br>
+
+6)Assign detected coin regions as the foreground.<br>
+
+7)Extract individual coins using Connected Components Analysis.<br>
+
+8)Display the segmented coins and extracted individual coins.<br>
 
 Pros & Cons:<br>
 
@@ -131,25 +136,34 @@ Pros & Cons:<br>
 
 Steps:<br>
 
-Convert the image to grayscale.<br>
-Apply Gaussian Blur and Otsu’s Thresholding.<br>
-Perform Morphological Closing to enhance object connectivity.<br>
-Compute Distance Transform and extract the sure foreground.<br>
-Define the sure background using dilation.<br>
-Identify the unknown region (difference between foreground and background).<br>
-Label different regions using Connected Components Analysis.<br>
-Apply the Watershed Algorithm, marking boundaries where needed.<br>
-Extract individual coins by isolating segmented components.<br>
-Display the segmented image and extracted coins.<br>
+1)Convert the image to grayscale.<br>
+
+2)Apply Gaussian Blur and Otsu’s Thresholding.<br>
+
+3)Perform Morphological Closing to enhance object connectivity.<br>
+
+4)Compute Distance Transform and extract the sure foreground.<br>
+
+5)Define the sure background using dilation.<br>
+
+6)Identify the unknown region (difference between foreground and background).<br>
+
+7)Label different regions using Connected Components Analysis.<br>
+
+8)Apply the Watershed Algorithm, marking boundaries where needed.<br>
+
+9)Extract individual coins by isolating segmented components.<br>
+
+10)Display the segmented image and extracted coins.<br>
+
+![alt text](<output images/watershed1.png>)
+![alt text](<output images/watershed2.png>)
 
 Pros & Cons:<br>
 
 ✅ Effectively segments touching and overlapping coins.<br>
 ✅ Works well for objects with clear boundaries.<br>
 ❌ May detect unnecessary boundaries in noisy images.<br>
-
-![alt text](<output images/watershed1.png>)
-![alt text](<output images/watershed2.png>)
 
 ## Total count of coin detected
 
@@ -254,13 +268,13 @@ Imutils: For image transformations and resizing.<br>
 
 Clone the repository:<br>
 git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git<br>
-cd VR_Assignment1_BhanujaBhatt_MT2024030
+cd <folder_name_where_cloned><br>
 
-Install the required dependencies:
-
+Install the required dependencies:<br>
 pip install opencv-python numpy matplotlib imageio imutils<br>
 
 Run the project
+run as normal python project
 
 ## Input
 
