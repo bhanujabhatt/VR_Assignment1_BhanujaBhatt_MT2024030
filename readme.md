@@ -1,7 +1,3 @@
-git add .
-git commit -m "sdf"
-git push -u origin main
-
 
 # 1)Coin Detection and Segmentation
 
