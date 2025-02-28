@@ -11,7 +11,7 @@ This project aims to detect, segment, and count coins in an image using various 
 
 ## Table of Contents
 
-1  Technologies Used
+1  Technologies Used <br>
 2  How to Install and Run the Project
 3  How to Use the Project
 4  Edge Detection Techniques
