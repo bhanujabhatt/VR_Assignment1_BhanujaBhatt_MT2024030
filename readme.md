@@ -11,44 +11,44 @@ This project aims to detect, segment, and count coins in an image using various 
 
 ## Table of Contents
 
-1  Technologies Used <br>
-2  How to Install and Run the Project
-3  How to Use the Project
-4  Edge Detection Techniques
-5  Sobel Edge Detection
-6  Prewitt Edge Detection
-7  Marr-Hildreth Edge Detection
-8  Canny Edge Detection
-9  Coin Segmentation
-10 count of total no detected coins
-11 Results and Analysis
-12 Future Scope
+  Technologies Used <br>
+  How to Install and Run the Project <br>
+  How to Use the Project <br>
+  Edge Detection Techniques <br>
+  Sobel Edge Detection<br>
+  Prewitt Edge Detection<br>
+  Marr-Hildreth Edge Detection<br>
+  Canny Edge Detection<br>
+  Coin Segmentation<br>
+  count of total no detected coins<br>
+  Results and Analysis<br>
+  Future Scope<br>
 
 ## Technologies Used
 
-. Python(Python 3.9.21)
-. OpenCV (cv2 4.11.0)
-. NumPy
-. Matplotlib
+ Python(Python 3.9.21)<br>
+ OpenCV (cv2 4.11.0)<br>
+ NumPy<br>
+ Matplotlib<br>
 
 ## How to Install and Run the Project
 
-.Clone the repository:
-.git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git
-cd VR_Assignment1_BhanujaBhatt_MT2024030
+Clone the repository:<br>
+git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git<br>
+cd VR_Assignment1_BhanujaBhatt_MT2024030<br>
 
-Install the required dependencies:
-pip install opencv-python numpy matplotlib
+Install the required dependencies:<br>
+pip install opencv-python numpy matplotlib<br>
 
-Run the project
+Run the project<br>
 
 
 ## How to Use the Project
 
-Ensure you have an image named coin.jpeg in the working directory.
-Run the script to apply different edge detection methods.
-The script will display the results, including edge maps, detected coin contours, and segmented outputs.
-The program will also count and display the number of coins detected.
+Ensure you have an image named coin.jpeg in the working directory.<br>
+Run the script to apply different edge detection methods.<br>
+The script will display the results, including edge maps, detected coin contours, and segmented outputs.<br>
+The program will also count and display the number of coins detected.<br>
 
 ## Edge Detection Techniques
 
@@ -59,86 +59,93 @@ Less sensitive to noise and provides smooth edge detection.
 ### 2. Prewitt Edge Detection
 Similar to Sobel but with simpler kernel operations.
 More sensitive to noise but provides sharp contrast edges.
+
 ![alt text](<output images/output using first order derivatiove sobel and prewitt.png>)
 
 #### conclusion 
 
-Sobel is less sensitive to noise__
-Prewitt is more sensitive to noise__
-Sobel generally performs better when you want more accurate, less noisy edges, especially in the presence of noise.__
-Prewitt is generally used when you want simpler, faster computations and you are dealing with less noisy images__
-Sobel X/Y might produce less extreme values or smoother gradients, which are more subtle, leading to gradual gray-scale variations.__
-Prewitt X/Y, by contrast, might produce a stronger contrast in its edge detections, where you have stark differences between edge and non-edge pixels, hence appearing as black and white.
+Sobel is less sensitive to noise<br>
+Prewitt is more sensitive to noise<br>
+Sobel generally performs better when you want more accurate, less noisy edges, especially in the presence of noise.<br>
+Prewitt is generally used when you want simpler, faster computations and you are dealing with less noisy images<br>
+Sobel X/Y might produce less extreme values or smoother gradients, which are more subtle, leading to gradual gray-scale variations.<br>
+Prewitt X/Y, by contrast, might produce a stronger contrast in its edge detections, where you have stark differences between edge and non-edge pixels, hence appearing as black and white.<br>
 
 ### 3. Mill hilderth edge detection
 Uses Laplacian of Gaussian (LoG) to detect zero crossings.
 Provides fine, one-pixel-thick edges but may have broken edges.
+
 ![alt text](<output images/USING Marr-Hildreth EDGE DETECTOR.png>)
 
 #### conclusion
 
-broken edges are present__
-one pixel thick edges__
-less error(get true edges)__
+broken edges are present<br>
+one pixel thick edges<br>
+less error(get true edges)<br>
 
 ### 4. Canny Edge Detection
 Uses Gaussian filtering and gradient-based thresholding.
 Produces clean, connected edges with minimal noise interference.
+
 ![alt text](<output images/USING CANNY EDGE DETECTOR.png>)
 
 
 #### conclusion
 
-less broken edges
-one pixel thick edges
-less error(get true edges)
+less broken edges<br>
+one pixel thick edges<br>
+less error(get true edges)<br>
 
 ## Coin Segmentation
 
 ### Region Splitting & Merging
 
-Steps:
+Steps:<br>
 
-Convert the image to grayscale.
-Apply Gaussian Blur to reduce noise.
-Apply Otsu’s Thresholding to create a binary image.
-Region Splitting:
-Recursively divide the image into smaller regions based on intensity variance.
-Stop splitting if variance is low or the region size is too small.
-Region Merging:
-Merge regions based on similarity (average intensity difference).
-Assign detected coin regions as the foreground.
-Extract individual coins using Connected Components Analysis.
-Display the segmented coins and extracted individual coins.
+Convert the image to grayscale.<br>
+Apply Gaussian Blur to reduce noise.<br>
+Apply Otsu’s Thresholding to create a binary image.<br>
 
-Pros & Cons:
+Region Splitting:<br>
+Recursively divide the image into smaller regions based on intensity variance.<br>
+Stop splitting if variance is low or the region size is too small.<br>
 
-✅ Avoids over-segmentation by only splitting where necessary.
-✅ Works well for well-separated coins.
-❌ May not perform well if coins are touching or overlapping.
+Region Merging:<br>
+Merge regions based on similarity (average intensity difference).<br>
+Assign detected coin regions as the foreground.<br>
+Extract individual coins using Connected Components Analysis.<br>
+Display the segmented coins and extracted individual coins.<br>
+
+Pros & Cons:<br>
+
+✅ Avoids over-segmentation by only splitting where necessary.<br>
+✅ Works well for well-separated coins.<br>
+❌ May not perform well if coins are touching or overlapping.<br>
+
 ![alt text](<output images/using region splitting and merging 1.png>)
 ![alt text](<output images/region splitting and merging2.png>)
 ![alt text](<output images/region splitting and merging 3.png>)
 
 2. Watershed Algorithm
 
-Steps:
-Convert the image to grayscale.
-Apply Gaussian Blur and Otsu’s Thresholding.
-Perform Morphological Closing to enhance object connectivity.
-Compute Distance Transform and extract the sure foreground.
-Define the sure background using dilation.
-Identify the unknown region (difference between foreground and background).
-Label different regions using Connected Components Analysis.
-Apply the Watershed Algorithm, marking boundaries where needed.
-Extract individual coins by isolating segmented components.
-Display the segmented image and extracted coins.
+Steps:<br>
+Convert the image to grayscale.<br>
+Apply Gaussian Blur and Otsu’s Thresholding.<br>
+Perform Morphological Closing to enhance object connectivity.<br>
+Compute Distance Transform and extract the sure foreground.<br>
+Define the sure background using dilation.<br>
+Identify the unknown region (difference between foreground and background).<br>
+Label different regions using Connected Components Analysis.<br>
+Apply the Watershed Algorithm, marking boundaries where needed.<br>
+Extract individual coins by isolating segmented components.<br>
+Display the segmented image and extracted coins.<br>
 
-Pros & Cons:
+Pros & Cons:<br>
 
-✅ Effectively segments touching and overlapping coins.
-✅ Works well for objects with clear boundaries.
-❌ May detect unnecessary boundaries in noisy images.
+✅ Effectively segments touching and overlapping coins.<br>
+✅ Works well for objects with clear boundaries.<br>
+❌ May detect unnecessary boundaries in noisy images.<br>
+
 ![alt text](<output images/watershed1.png>)
 ![alt text](<output images/watershed2.png>)
 
@@ -179,43 +186,50 @@ Convert from BGR to RGB for correct color representation in Matplotlib.
 
 11. Print the Total Number of Coins
 Output the total count of detected coins in the console.
+
 ![alt text](<output images/count no of coins.png>)
 
 
 ## Results and Analysis
-Edge Detection Techniques
-Sobel Edge Detection
 
-Strengths: Highlights edges well and is computationally efficient.
-Weaknesses: Sensitive to noise and not ideal for segmentation.
-Prewitt Edge Detection
+Edge Detection Techniques<br>
+Sobel Edge Detection<br>
 
-Strengths: Simple computation, good for basic edge detection.
-Weaknesses: More noise-sensitive than Sobel.
-Marr-Hildreth Edge Detection
+Strengths: Highlights edges well and is computationally efficient.<br>
+Weaknesses: Sensitive to noise and not ideal for segmentation.<br>
 
-Strengths: Captures finer edges and is useful for high-contrast images.
-Weaknesses: Can produce broken edges.
-Canny Edge Detection
+Prewitt Edge Detection<br>
 
-Strengths: Best noise suppression, provides clear and connected edges.
-Weaknesses: Computationally expensive.
-Segmentation Techniques
-Region Splitting & Merging
+Strengths: Simple computation, good for basic edge detection.<br>
+Weaknesses: More noise-sensitive than Sobel.<br>
 
-Strengths: Avoids over-segmentation and works well for well-separated objects.
-Weaknesses: Fails with overlapping or touching coins.
-Watershed Algorithm
+Marr-Hildreth Edge Detection<br>
 
-Strengths: Effectively segments touching and overlapping coins.
-Weaknesses: May detect extra boundaries in noisy images.
+Strengths: Captures finer edges and is useful for high-contrast images.<br>
+Weaknesses: Can produce broken edges.<br>
+
+Canny Edge Detection<br>
+
+Strengths: Best noise suppression, provides clear and connected edges.<br>
+Weaknesses: Computationally expensive.<br>
+
+Segmentation Techniques<br>
+
+Region Splitting & Merging<br>
+
+Strengths: Avoids over-segmentation and works well for well-separated objects.<br>
+Weaknesses: Fails with overlapping or touching coins.<br>
+
+Watershed Algorithm<br>
+
+Strengths: Effectively segments touching and overlapping coins.<br>
+Weaknesses: May detect extra boundaries in noisy images.<br>
 
 ## Future Scope
-Implement deep learning-based detection (e.g., using CNNs)
-Improve robustness for complex backgrounds
-Develop a real-time detection system using OpenCV and a webcam
 
-
+Implement deep learning-based detection (e.g., using CNNs)<br>
+Improve robustness for complex backgrounds<br>
+Develop a real-time detection system using OpenCV and a webcam<br>
 
 # 2) Image Stitching 
 
