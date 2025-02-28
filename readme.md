@@ -126,9 +126,10 @@ Pros & Cons:<br>
 ![alt text](<output images/region splitting and merging2.png>)
 ![alt text](<output images/region splitting and merging 3.png>)
 
-2. Watershed Algorithm
+ ### Watershed Algorithm
 
 Steps:<br>
+
 Convert the image to grayscale.<br>
 Apply Gaussian Blur and Otsu’s Thresholding.<br>
 Perform Morphological Closing to enhance object connectivity.<br>
@@ -237,33 +238,26 @@ Develop a real-time detection system using OpenCV and a webcam<br>
 
 This project demonstrates image stitching by combining multiple images into a single panoramic image. The implementation is done using OpenCV and employs two different approaches:
 
-Feature-based Image Stitching: Uses SIFT (Scale-Invariant Feature Transform) for keypoint detection, BFMatcher for feature matching, and homography estimation for warping and stitching.
-
+Feature-based Image Stitching: Uses SIFT (Scale-Invariant Feature Transform) for keypoint detection, BFMatcher for feature matching, and homography estimation for warping and stitching.<br>
 Automated Stitching using OpenCV's Stitcher_create(): A simpler alternative that leverages OpenCV's built-in stitching module.
 
 ## Technologies Used
 
-OpenCV: For image processing and feature extraction.
-
-NumPy: For numerical operations and matrix manipulations.
-
-Matplotlib: For visualization and debugging.
-
-ImageIO: For reading and writing images.
-
-Imutils: For image transformations and resizing.
+OpenCV: For image processing and feature extraction.<br>
+NumPy: For numerical operations and matrix manipulations.<br>
+Matplotlib: For visualization and debugging.<br>
+ImageIO: For reading and writing images.<br>
+Imutils: For image transformations and resizing.<br>
 
 ## How to Install and Run the Project
 
-Clone the repository:
-
-git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git
-
+Clone the repository:<br>
+git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git<br>
 cd VR_Assignment1_BhanujaBhatt_MT2024030
 
 Install the required dependencies:
 
-pip install opencv-python numpy matplotlib imageio imutils
+pip install opencv-python numpy matplotlib imageio imutils<br>
 
 Run the project
 
@@ -291,13 +285,13 @@ A single stitched panoramic image.
 
 ### conclusion
 
-1)BFMatcher is going to try all the possibilities (which is the meaning of "Brute Force" and hence it will find the best matches.
+1)BFMatcher is going to try all the possibilities (which is the meaning of "Brute Force" and hence it will find the best matches.<br>
 2)FLANN, meaning "Fast Library for Approximate Nearest Neighbors", will be much faster but will find an approximate nearest neighbors. 
-WE ARE USING bf because there are only 2 images we are planning to stich
+WE ARE USING bf because there are only 2 images we are planning to stich<br>
 3)BFMatcher.match()
-Finds the best match for each descriptor in the query set.
+Finds the best match for each descriptor in the query set.<br>
 4)BFMatcher.knnMatch()
-Finds the k best matches for each descriptor.
+Finds the k best matches for each descriptor.<br>
 5)KNN provides a larger set of candidate features.
 
 
@@ -309,7 +303,7 @@ Finds the k best matches for each descriptor.
  [-1.64669865e-01  8.28759249e-01  1.16199037e+02]
  [-2.61629253e-04 -1.42613971e-05  1.00000000e+00]]
 
-Warping and Stitching: Aligns and blends the images.
+5)Warping and Stitching: Aligns and blends the images.
 
 ![without warping](<output images/pre output using keypoint.png>)
 
@@ -317,27 +311,28 @@ Warping and Stitching: Aligns and blends the images.
  
  ### USING CV2 Stitcher_create()
 
-Image Loading: Reads images and converts them to RGB for proper visualization.
+1)Image Loading: Reads images and converts them to RGB for proper visualization.
 
-Stitching Process:
-
-Uses OpenCV’s Stitcher_create() to perform automatic image stitching.
-
-If successful, saves and displays the stitched output.
+2)Stitching Process:<br>
+Uses OpenCV’s Stitcher_create() to perform automatic image stitching.<br>
+If successful, saves and displays the stitched output.<br>
 
 ![alt text](<output images/pre output using cv2 stiching.png>)
 
-Post-Processing:
+3)Post-Processing:
 
-Applies a border to the stitched image to prevent cropping artifacts.
+Applies a border to the stitched image to prevent cropping artifacts.<br>
+
 ![alt text](<output images/mask using cv2 pre stching.png>)
 
-Converts the stitched image to grayscale and applies thresholding.
+4)Converts the stitched image to grayscale and applies thresholding.
 
-Detects external contours and refines the mask using erosion.
+5)Detects external contours and refines the mask using erosion.
+
 ![alt text](<output images/finalmask using cv2.png>)
 
-Extracts the bounding rectangle and crops the final output.
+6)Extracts the bounding rectangle and crops the final output.
 
-Final Output: Saves the refined image and displays it using Matplotlib.
+7)Final Output: Saves the refined image and displays it using Matplotlib.
+
 ![alt text](<output images/stiched image using cv2.png>)
