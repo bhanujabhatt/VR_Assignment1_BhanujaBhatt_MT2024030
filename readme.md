@@ -30,7 +30,7 @@ This project aims to detect, segment, and count coins in an image using various 
 ## How to Install and Run the Project
 
 Clone the repository:<br>
-git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git<b
+git clone https://github.com/bhanujabhatt/VR_Assignment1_BhanujaBhatt_MT2024030.git<br>
 cd <folder_name_where_cloned><br>
 
 Install the required dependencies:<br>
